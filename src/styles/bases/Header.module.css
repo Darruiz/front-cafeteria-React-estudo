@@ -1,0 +1,132 @@
+/* Geral */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background-color: var(--gray-700); /* Fundo do cabeçalho */
+    color: var(--gray-100); /* Cor do texto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 8px;
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    color: var(--purple-dark); /* Marca em roxo escuro */
+}
+
+/* Menu Desktop */
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 16px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: var(--gray-100); /* Links em cinza claro */
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    transition: color 0.3s;
+}
+
+.menu li a:hover {
+    color: var(--blue); /* Azul claro ao passar o mouse */
+}
+
+/* Menu Mobile */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--gray-100); /* Barras do menu em cinza claro */
+    transition: all 0.3s;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100%;
+    background-color: var(--gray-900); /* Fundo da barra lateral em preto */
+    color: var(--gray-100); /* Texto em cinza claro */
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+}
+
+.sidebar.open {
+    right: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 16px 0;
+}
+
+.sidebar li a {
+    text-decoration: none;
+    color: var(--gray-100); /* Links da barra lateral em cinza claro */
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.sidebar li a:hover {
+    color: var(--blue-dark); /* Azul escuro ao passar o mouse */
+}
+
+.close {
+    background: none;
+    border: none;
+    color: var(--gray-100); /* Botão fechar em cinza claro */
+    font-size: 1.5rem;
+    align-self: flex-end;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: var(--danger); /* Vermelho ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
