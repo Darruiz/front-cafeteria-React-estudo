@@ -5,8 +5,39 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React + TS</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Configuração do Tailwind CSS personalizada
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gray: {
+                900: '#000000',
+                700: '#1A1A1A',
+                500: '#262626',
+                400: '#333333',
+                300: '#808080',
+                200: '#D9D9D9',
+                100: '#F2F2F2',
+              },
+              blue: {
+                DEFAULT: '#4EA8DE',
+                dark: '#1E6F9F',
+              },
+              purple: {
+                DEFAULT: '#8284FA',
+                dark: '#5E60CE',
+              },
+              danger: '#E25858',
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body>
+  <body class="bg-gray-400 font-sans">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

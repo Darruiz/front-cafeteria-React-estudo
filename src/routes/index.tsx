@@ -5,6 +5,7 @@ import { About } from '../pages/public/About';
 import { NotFound } from '../pages/public/NotFound';
 import Login from '../pages/auth/Login';
 import { Header } from '../components/bases/Header';
+import { FazerPedidos } from '../pages/public/FazerPedidos';
 
 export function AppRoutes() {
     return (
@@ -15,6 +16,7 @@ export function AppRoutes() {
                 <Route path="/home" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/fazer-pedido" element={<FazerPedidos />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </Router>
